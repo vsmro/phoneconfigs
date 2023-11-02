@@ -1,0 +1,9 @@
+/*button display*/
+.btnDisplay {
+    display: none;
+}
+
+/*div with the config input fields*/
+.config {
+    display:none;
+}
