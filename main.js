@@ -1,14 +1,14 @@
 //input field for numbers bigger than 5. and a button Continue
-//If mistake messaje try again, if success continue
+//If mistake message try again, if success continue
 // tablou with phone configuration
 //each config: model, pret, constructor, memory
 //After Continue zone with add new phone configs
 //Click Add after each new config
-//Display button appaears after the added confisg reaches the number from the input type
+//Display button appears after the added config reaches the number from the input type
 //After click display, the phone configs will appear in the console.
 
 
-let divConfig = document.getElementById("config");
+//let divConfig = document.getElementById("config");
 let alertMessage= "The number you have entered is less than 5";
 let tablou = [];
 
