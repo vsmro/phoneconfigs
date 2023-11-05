@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Phone Configuration page</title>
+</head>
+<body>
+    <label for="inputNo">Please enter a number higher than 5</label><br>
+    <input type="text" id="inputNo"/><br>
+    <button id="btnContinue" onclick="checkInput()">Continue</button>
+        <div class="config" id="config">
+            <label for="model">Enter Model</label><br>
+            <input type="text" id="model"><br>
+            <label for="model">Enter Pret</label><br>
+            <input type="text" id="pret"><br>
+            <label for="model">Enter Constructor</label><br>
+            <input type="text" id="constructor"><br>
+            <label for="model">Enter Memory</label><br>
+            <input type="text" id="memory"><br>
+            <div id="divAddBtn">
+                <button id="btnAdd" onclick="addConfig()"> Add New Config</button>
+            </div> 
+        </div>
+        
+    <button class="btnDisplay" id="btnDisplay" onclick="displayConfigs()"> Display Configs</button>
+</body>
+</html>

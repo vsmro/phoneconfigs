@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+
+Utilizator -> (Introduce numar in\n input field)
+(Introduce numar in\n input field)->(Verifica daca >5)
+(Verifica daca >5)-->(Afiseaza mesaj eroare \nrencearca) : Gresit
+(Afiseaza mesaj eroare \nrencearca)->(Introduce numar in\n input field)
+Utilizator--->(Click pe butonul\n "Continue")
+(Verifica daca >5)-->(Click pe butonul\n "Continue") : Corect
+(Click pe butonul\n "Continue")-->(Afiseaza zona de\n introducere configuratii\n de telefone)
+Utilizator->(Introduce configuratie\n de telefoane)
+(Afiseaza zona de\n introducere configuratii\n de telefone)-->(Introduce configuratie\n de telefoane)
+Utilizator->(Click pe butonul "Add" \nsa salveze configuratia)
+(Introduce configuratie\n de telefoane)-->(Click pe butonul "Add" \nsa salveze configuratia)
+(Click pe butonul "Add" \nsa salveze configuratia)->(Verifica daca numarul \nde configuratii coincide \ncu numarul introdus d\ne catre utilizator)
+(Verifica daca numarul \nde configuratii coincide \ncu numarul introdus d\ne catre utilizator)->(Introduce configuratie\n de telefoane) : Daca nr. de configuratii nu coincide cu nr. introdus
+(Verifica daca numarul \nde configuratii coincide \ncu numarul introdus d\ne catre utilizator)-->(Dispare butonul "Add" si apare buton "Display"): Daca nr. de configuratii coincide cu nr introdus
+Utilizator--->(Click buton "Display")
+(Click buton "Display")<- (Dispare butonul "Add" si apare buton "Display")
+(Click buton "Display")-->(Afiseaza configuratiile de teleofiane in "console.log)
+@enduml
