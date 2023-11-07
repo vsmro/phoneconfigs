@@ -60,36 +60,29 @@ function checkInput() {
      }
 }
 
-    function Configuration(model, pret, constructor, memory) {
-        this.model = model
-        this.pret = pret
-        this.constructor = constructor
-        this.memory = memory
+function Configuration(model, pret, constructor, memory) {
+    this.model = model
+    this.pret = pret
+    this.constructor = constructor
+    this.memory = memory
 
-        // constructor(model, pret, constructor, memory) {
-        //     this.model
-        // }
+}
 
-    }
+function emptyInput() {
+    document.getElementById("model").value = ""
+    document.getElementById("pret").value = ""
+    document.getElementById("constructor").value =""
+    document.getElementById("memory").value = ""
+}
 
-    let config = new Configuration()
-
-        config.model = document.getElementById("model").value
-        config.pret = document.getElementById("pret").value
-        config.constructor = document.getElementById("constructor").value
-        config.memory = document.getElementById("memory").value
-
-
-
-    
 //function to add new cofig to the tablou array/object
 function addConfig() {
-    
-    // let model = document.getElementById("model").value;
-    // let pret = document.getElementById("pret").value;
-    // let constructor = document.getElementById("constructor").value
-    // let memory = document.getElementById("memory").value
-    // let value = getValue();
+
+    let model = document.getElementById("model").value;
+    let pret = document.getElementById("pret").value;
+    let constructor = document.getElementById("constructor").value
+    let memory = document.getElementById("memory").value
+    let value = getValue();
     // //create a config
     // let config = {
     //     model:model,
@@ -98,7 +91,8 @@ function addConfig() {
     //     memory: memory
     //
     // }
-    
+    let config = new Configuration(model, pret, constructor, memory)
+    //console.log(config)
             
     tablou.push(config);
     
@@ -110,12 +104,24 @@ function addConfig() {
         
     }
 
-   
 
 }
 //display the array in console.log
 function displayConfigs() {
-    console.log(tablou);
+    //console.log(tablou);
+
+    for(let i=0; i<tablou.length; i++) {
+
+        // console.log(tablou[i])
+        if(tablou[i].pret > 100) {
+            for(let key in tablou[i] ) {
+                console.log("Cheia este " + key + " iar valoarea: " + tablou[i][key] )
+            }
+            console.log(tablou[i])
+        }else {
+
+        }
+    }
 }
 
 

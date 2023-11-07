@@ -12,7 +12,7 @@ LandingPage <|- Tablou
 LandingPage <|-- Button
 LandingPage <|--Zona
 LandingPage <|--Mesaj
-Tablou "1" *-- "many"Configuration
+Tablou "1" *-- "5<"Configuration
 class Configuration {
 model : String
 pret : String
