@@ -1,27 +1,45 @@
 @startuml
 
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class LandingPage {
+inputElement : Number
+zona configuratii : String
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Tablou {
+}
+LandingPage <|- Tablou
+LandingPage <|-- Button
+LandingPage <|--Zona
+LandingPage <|--Mesaj
+Tablou "1" *-- "many"Configuration
+class Configuration {
+model : String
+pret : String
+constructor : String
+memory : String
+
+checkInput()
+getValue()
+}
+
+class Button {
+continue
+add
+display
+clickContinue()
+clickAdd()
+clickDisplay()
+dispareAdd()
+apareDisplay()
+}
+
+class Mesaj {
+mesajEroare
+displayErrorMessage()
+}
+
+class Zona {
 }
 
 @enduml

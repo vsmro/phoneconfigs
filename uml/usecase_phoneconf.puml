@@ -4,7 +4,7 @@
 
 
 
-Utilizator -> (Introduce numar in\n input field)
+Utilizator -> (Introduce numar in\n input field): START
 (Introduce numar in\n input field)->(Verifica daca >5)
 (Verifica daca >5)-->(Afiseaza mesaj eroare \nrencearca) : Gresit
 (Afiseaza mesaj eroare \nrencearca)->(Introduce numar in\n input field)
@@ -20,5 +20,5 @@ Utilizator->(Click pe butonul "Add" \nsa salveze configuratia)
 (Verifica daca numarul \nde configuratii coincide \ncu numarul introdus d\ne catre utilizator)-->(Dispare butonul "Add" si apare buton "Display"): Daca nr. de configuratii coincide cu nr introdus
 Utilizator--->(Click buton "Display")
 (Click buton "Display")<- (Dispare butonul "Add" si apare buton "Display")
-(Click buton "Display")-->(Afiseaza configuratiile de teleofiane in "console.log)
+(Click buton "Display")-->(Afiseaza configuratiile de teleofiane in "console.log) : THE END
 @enduml

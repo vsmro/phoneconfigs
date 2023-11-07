@@ -8,7 +8,7 @@
 //After click display, the phone configs will appear in the console.
 
 
-//let divConfig = document.getElementById("config");
+
 let alertMessage= "The number you have entered is less than 5";
 let tablou = [];
 
@@ -35,6 +35,9 @@ function removeClassB() {
 
 //REFACTOR METHODS REMOVECLASS A/B!!! BOTH MAKE THE SAME TASK
     function removeClass(htmlElement, className) {
+        this.htmlElement = htmlElement
+        this.className = className
+
         htmlElement.classList.remove("className");
     }
 */
@@ -56,23 +59,45 @@ function checkInput() {
         location.reload()
      }
 }
+
+    function Configuration(model, pret, constructor, memory) {
+        this.model = model
+        this.pret = pret
+        this.constructor = constructor
+        this.memory = memory
+
+        // constructor(model, pret, constructor, memory) {
+        //     this.model
+        // }
+
+    }
+
+    let config = new Configuration()
+
+        config.model = document.getElementById("model").value
+        config.pret = document.getElementById("pret").value
+        config.constructor = document.getElementById("constructor").value
+        config.memory = document.getElementById("memory").value
+
+
+
     
 //function to add new cofig to the tablou array/object
 function addConfig() {
     
-    let model = document.getElementById("model").value;
-    let pret = document.getElementById("pret").value;
-    let constructor = document.getElementById("constructor").value
-    let memory = document.getElementById("memory").value
-    let value = getValue();
-    //create a config
-    let config = {
-        model:model,
-        pret: pret,
-        constructor: constructor,
-        memory: memory  
-
-    }
+    // let model = document.getElementById("model").value;
+    // let pret = document.getElementById("pret").value;
+    // let constructor = document.getElementById("constructor").value
+    // let memory = document.getElementById("memory").value
+    // let value = getValue();
+    // //create a config
+    // let config = {
+    //     model:model,
+    //     pret: pret,
+    //     constructor: constructor,
+    //     memory: memory
+    //
+    // }
     
             
     tablou.push(config);
@@ -88,7 +113,7 @@ function addConfig() {
    
 
 }
-//display the array in conole.log
+//display the array in console.log
 function displayConfigs() {
     console.log(tablou);
 }
